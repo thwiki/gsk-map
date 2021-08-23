@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>GensoKyoMap</title>
+  </head>
+  <body>
+    <div class="root">
+      <img src="./assets/分层改.png" class="image" />
+      <div id="place" class="place torifune-iseki"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+    </div>
+    <div class="message-box"></div>
+  </body>
+  <script>
+    const torifuneIseki =
+      "鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹";
+    const capitalOfTheMoon =
+      "月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都";
+    const mapText = {
+      "torifune-iseki": torifuneIseki,
+      "capital-of-the-moon": capitalOfTheMoon,
+    };
+    const place = $(".place");
+    const messageBox = $(".message-box");
+    place.on("click", (event) => {
+      messageBox.css({ top: event.pageY, display: "initial" });
+      messageBox.text(mapText[event.target.className.split(" ")[1]]);
+      // Judge whether the cursor is on the left or right to make the message box display position
+      if (event.pageX < $(document).width() / 2)
+        messageBox.css({ left: event.pageX, right: "" });
+      else
+        messageBox.css({ left: "", right: $(document).width() - event.pageX });
+    });
+    const root = $(".root");
+    root.on("click", (event) => {
+      if (event.target.id === "place") return;
+      messageBox.css("display", "none");
+    });
+  </script>
+  <style>
+    .root {
+      position: relative;
+      width: 100%;
+    }
+    .image {
+      width: 100%;
+    }
+    .message-box {
+      display: none;
+      position: absolute;
+      width: 40%;
+      max-height: 300px;
+      overflow: auto;
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
+        -3px -3px 10px rgba(0, 0, 0, 0.1);
+    }
+    .place {
+      cursor: pointer;
+    }
+    .torifune-iseki {
+      position: absolute;
+      top: 0.5%;
+      left: 10%;
+      width: 35%;
+      aspect-ratio: 16/15;
+    }
+    .capital-of-the-moon {
+      position: absolute;
+      top: 5.5%;
+      left: 13%;
+      width: 80%;
+      aspect-ratio: 32/31;
+    }
+  </style>
+</html>
