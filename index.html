@@ -12,14 +12,69 @@
       <img src="./assets/分层改.png" class="image" />
       <div id="place" class="place torifune-iseki"></div>
       <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
+      <div id="place" class="place capital-of-the-moon"></div>
     </div>
     <div class="message-box"></div>
   </body>
+  <script language="JavaScript"> 
+    //<!-- 
+    
+    if (window.Event) 
+    document.captureEvents(Event.MOUSEUP); 
+    
+    function nocontextmenu() 
+    { 
+    event.cancelBubble = true 
+    event.returnValue = false; 
+    
+    return false; 
+    } 
+    
+    function norightclick(e) 
+    { 
+      if (window.Event) 
+      { 
+       if (e.which == 2 || e.which == 3) return false; 
+      } else if (event.button == 2 || event.button == 3) 
+      { 
+        event.cancelBubble = true 
+        event.returnValue = false; 
+        return false; 
+      } 
+    
+    } 
+    
+    document.oncontextmenu = nocontextmenu; // for IE5+ 
+    document.onmousedown = norightclick; // for all others 
+    //--> 
+    </script>
   <script>
     const torifuneIseki =
-      "鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹鸟船遗迹";
+      "鸟船遗迹";
     const capitalOfTheMoon =
-      "月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都月之都";
+      "月之都";
     const mapText = {
       "torifune-iseki": torifuneIseki,
       "capital-of-the-moon": capitalOfTheMoon,
@@ -52,12 +107,13 @@
     .message-box {
       display: none;
       position: absolute;
-      width: 40%;
+      width: fit-content;
+      max-width: 40%;
       max-height: 300px;
       overflow: auto;
       border-radius: 10px;
       backdrop-filter: blur(2px);
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.5);
       padding: 10px;
       box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
         -3px -3px 10px rgba(0, 0, 0, 0.1);
