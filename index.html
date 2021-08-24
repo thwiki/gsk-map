@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>GensoKyoMap</title>
   </head>
-  <body>
+    <body>
     <div class="root">
       <img src="./assets/分层改.png" class="image" />
       <div id="place" class="place satellite_torifune"></div>
@@ -87,10 +87,10 @@
     document.oncontextmenu = nocontextmenu; // for IE5+ 
     document.onmousedown = norightclick; // for all others 
     //--> 
-    </script>
+  </script>
   <script>
     const satellitetorifune =
-    "鸟船遗迹";
+    "卫星空间站鸟船 \n在近未来的某个时间，人类发射的宇宙空间站。 \n鸟船上搭载了一个完整的，并且经过人工挑选与优化的动植物生态系统。在宇宙环境中进行生态循环实验，借此寻找改造地球环境的方案参考，这就是鸟船的目的。 \n或许是为了祈求平安运行，空间站中搭建了一座天鸟船神社。 \n然而，因为原因不明的机械故障，现在的鸟船已经变成了失去功能的太空垃圾，漂浮在地月系的其中一个拉格朗日点上。虽然失去了原有的功能，但是鸟船上的生态系统仍然保持着循环和演化：植物脱离人工控制，形成了盘根错节的丛林；封闭环境加上宇宙辐射，生物大都独立演化成了地球上没有的亚种，甚至突变进化出了类似奇美拉一样的有翼猫型生物，也有地球不存在的新种病毒。 \n专家学者们揶揄道：“日本的技术人员花了那么多钱，结果只是在宇宙中建造了一座遗迹。”故此，这座废弃的空间站也被称为“鸟船遗迹”。";
     const Moon =
     "月之都";
     const dreamworld =
@@ -246,7 +246,7 @@
       width: 100%;
     }
     .message-box {
-      display: none;
+      display:-webkit-box;
       position: absolute;
       width: fit-content;
       max-width: 40%;
@@ -258,6 +258,7 @@
       padding: 10px;
       box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
         -3px -3px 10px rgba(0, 0, 0, 0.1);
+      line-break:auto;
     }
     .place {
       cursor: pointer;
@@ -277,427 +278,259 @@
       aspect-ratio: 32/31;
       border-radius:50%;
     }
-    .moon {
+    .dreamworld {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .paradise {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .underworld {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .rainbowdragoncave {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .moriyashrine {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .kasenszone {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .ropeway {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .waterfall {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .aliceshouse {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .marisashouse {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .scarletmansion {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .kourindou {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .sungarden {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .lake {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .mouseshrine {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .setdownpool {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .ship {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .village {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .aqshouse {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .ryuujin {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .suzunaan {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .temple {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .washfoot {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .hakureshrine {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .fairyshouse {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .shinreimausoleum {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .path {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .houseeternity {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .bamboo {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .castle {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .muenzuka {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .otherworld {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .oldhell {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .chireipalace {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .reactor {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
+    .tiryagyoniworld {
       position: absolute;
       top: 5.5%;
       left: 13%;
       width: 80%;
       aspect-ratio: 32/31;
     }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-    }
-    .moon {
+    .primateszoo {
       position: absolute;
       top: 5.5%;
       left: 13%;
