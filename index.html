@@ -6,61 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>GensoKyoMap</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
   </head>
     <body ondragstart="return false">
-      <!-- <audio id="music1" controls="controls" autoplay="autoplay" preload id="music1" hidden>
-        <source src="music/bgmusic.mp3" />
-      </audio> -->
-        <!--这里是音乐-->
-      <!-- <img id="btn" class="active" src="img/music.png" alt="" /> -->
-        <!-- 这里是一个可以控制背景音乐播放暂停的开关 -->
-      <div class="root">
-      <img src="./assets/分层改.png" class="image" />
-      <div id="place" class="place satellitetorifune"></div>
-      <div id="place" class="place dreamworld"></div>
-      <div id="place" class="place moon"></div>
-      <div id="place" class="place paradise"></div>
-      <div id="place" class="place underworld"></div>
-      <div id="place" class="place rainbowdragoncave"></div>
-      <div id="place" class="place moriyashrine"></div>
-      <div id="place" class="place kasenszone"></div>
-      <div id="place" class="place bamboo"></div>
-      <div id="place" class="place ropeway"></div>
-      <div id="place" class="place waterfall"></div>
-      <div id="place" class="place kappasmarket"></div>
-      <div id="place" class="place frogpool"></div>
-      <div id="place" class="place forest"></div>
-      <div id="place" class="place fairytree"></div>
-      <div id="place" class="place wiretower"></div>
-      <div id="place" class="place aliceshouse"></div>
-      <div id="place" class="place marisashouse"></div>
-      <div id="place" class="place scarletmansion"></div>
-      <div id="place" class="place kourindou"></div>
-      <div id="place" class="place sungarden"></div>
-      <div id="place" class="place lake"></div>
-      <div id="place" class="place mouseshrine"></div>
-      <div id="place" class="place setdownpool"></div>
-      <div id="place" class="place ship"></div>
-      <div id="place" class="place village"></div>
-      <div id="place" class="place aqshouse"></div>
-      <div id="place" class="place ryuujin"></div>
-      <div id="place" class="place suzunaan"></div>
-      <div id="place" class="place temple"></div>
-      <div id="place" class="place washfoot"></div>
-      <div id="place" class="place hakureshrine"></div>
-      <div id="place" class="place fairyshouse"></div>
-      <div id="place" class="place shinreimausoleum"></div>
-      <div id="place" class="place path"></div>
-      <div id="place" class="place houseeternity"></div>
-      <div id="place" class="place castle"></div>
-      <div id="place" class="place muenzuka"></div>
-      <div id="place" class="place otherworld"></div>
-      <div id="place" class="place oldhell"></div>
-      <div id="place" class="place chireipalace"></div>
-      <div id="place" class="place reactor"></div>
-      <div id="place" class="place tiryagyoniworld"></div>
-      <div id="place" class="place primateszoo"></div>
-      <div id="place" class="place nitunting"></div>
+      
+      <!-- 导航栏 -->
+      <div class='card-holder'>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-01'>
+                    <span class='card-content'>satellitetorifune</span>
+                </div>
+            </a>
+        </div>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-02'>
+                    <span class='card-content'>underworld</span>
+                </div>
+            </a>
+        </div>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-03'>
+                    <span class='card-content'>rainbowdragoncave</span>
+                </div>
+            </a>
+        </div>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-04'>
+                    <span class='card-content'>wiretower</span>
+                </div>
+            </a>
+        </div>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-05'>
+                    <span class='card-content'>aqshouse</span>
+                </div>
+            </a>
+        </div>
+        <div class='card-wrapper'>
+            <a href='#'>
+                <div class='card bg-06'>
+                    <span class='card-content'>houseeternity</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div style="text-align:center;clear:both;">
+      <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+      <script src="/follow.js" type="text/javascript"></script>
+    </div>      
+    <!-- 导航栏 -->
+
+    <!-- <audio id="music1" controls="controls" autoplay="autoplay" preload id="music1" hidden>
+      <source src="music/bgmusic.mp3" />
+    </audio> -->
+      <!--这里是音乐-->
+    <!-- <img id="btn" class="active" src="img/music.png" alt="" /> -->
+      <!-- 这里是一个可以控制背景音乐播放暂停的开关 -->
+    <div class="root">
+    <img src="./assets/分层改.png" class="image" />
+    <div id="place" class="place satellitetorifune"></div>
+    <div id="place" class="place dreamworld"></div>
+    <div id="place" class="place moon"></div>
+    <div id="place" class="place paradise"></div>
+    <div id="place" class="place underworld"></div>
+    <div id="place" class="place rainbowdragoncave"></div>
+    <div id="place" class="place moriyashrine"></div>
+    <div id="place" class="place kasenszone"></div>
+    <div id="place" class="place bamboo"></div>
+    <div id="place" class="place ropeway"></div>
+    <div id="place" class="place waterfall"></div>
+    <div id="place" class="place kappasmarket"></div>
+    <div id="place" class="place frogpool"></div>
+    <div id="place" class="place forest"></div>
+    <div id="place" class="place fairytree"></div>
+    <div id="place" class="place wiretower"></div>
+    <div id="place" class="place aliceshouse"></div>
+    <div id="place" class="place marisashouse"></div>
+    <div id="place" class="place scarletmansion"></div>
+    <div id="place" class="place kourindou"></div>
+    <div id="place" class="place sungarden"></div>
+    <div id="place" class="place lake"></div>
+    <div id="place" class="place mouseshrine"></div>
+    <div id="place" class="place setdownpool"></div>
+    <div id="place" class="place ship"></div>
+    <div id="place" class="place village"></div>
+    <div id="place" class="place aqshouse"></div>
+    <div id="place" class="place ryuujin"></div>
+    <div id="place" class="place suzunaan"></div>
+    <div id="place" class="place temple"></div>
+    <div id="place" class="place washfoot"></div>
+    <div id="place" class="place hakureshrine"></div>
+    <div id="place" class="place fairyshouse"></div>
+    <div id="place" class="place shinreimausoleum"></div>
+    <div id="place" class="place path"></div>
+    <div id="place" class="place houseeternity"></div>
+    <div id="place" class="place castle"></div>
+    <div id="place" class="place muenzuka"></div>
+    <div id="place" class="place otherworld"></div>
+    <div id="place" class="place oldhell"></div>
+    <div id="place" class="place chireipalace"></div>
+    <div id="place" class="place reactor"></div>
+    <div id="place" class="place tiryagyoniworld"></div>
+    <div id="place" class="place primateszoo"></div>
+    <div id="place" class="place nitunting"></div>
     </div>
     <div class="message-box"></div>
   </body>
@@ -266,346 +319,415 @@
     });
   </script>
   <style>
-    .root {
-      position: relative;
-      width: 100%;
-    }
-    .image {
-      width: 100%;
-    }
-    .message-box {
-      display:-webkit-box;
-      position: absolute;
-      width: fit-content;
-      max-width: 50%;
-      /* max-height: 300px; */
-      overflow: auto;
-      border-radius: 10px;
-      backdrop-filter: blur(2px);
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 10px;
-      box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
-        -3px -3px 10px rgba(0, 0, 0, 0.1);
-      line-break:auto;
-    }
-    .place {
-      cursor: pointer;
-    }
-    .satellitetorifune {
-      position: absolute;
-      top: 0.5%;
-      left: 10%;
-      width: 35%;
-      aspect-ratio: 16/15;
-    }
-    .moon {
-      position: absolute;
-      top: 5.5%;
-      left: 13%;
-      width: 80%;
-      aspect-ratio: 32/31;
-      border-radius: 100%;
-    }
-    .dreamworld {
-      position: absolute;
-      top: 15.4%;
-      left: 7.1%;
-      width: 87.2%;
-      aspect-ratio: 1116/468;
-    }
-    .paradise {
-      position: absolute;
-      top: 21.2%;
-      left: 20.9%;
-      width: 43.8%;
-      aspect-ratio: 561/316;
-    }
-    .underworld {
-      position: absolute;
-      top: 24.3%;
-      left: 68.3%;
-      width: 23.5%;
-      aspect-ratio: 301/226;
-    }
-    .rainbowdragoncave {
-      position: absolute;
-      top: 27.2%;
-      left: 41.5%;
-      width: 5.5%;
-      aspect-ratio: 70/53;
-    }
-    .moriyashrine {
-      position: absolute;
-      top: 28%;
-      left: 35%;
-      width: 31.6%;
-      aspect-ratio: 405/116;
-    }
-    .kasenszone {
-      position: absolute;
-      top: 29.1%;
-      left: 11.8%;
-      width: 11.2%;
-      aspect-ratio: 143/82;
-    }
-    .ropeway {
-      position: absolute;
-      top: 30%;
-      left: 27.7%;
-      width: 7.3%;
-      aspect-ratio: 94/137;
-    }
-    .waterfall {
-      position: absolute;
-      top: 29.7%;
-      left: 51.7%;
-      width: 11.8%;
-      aspect-ratio: 151/304;
-    }
-    .kappasmarket {
-      position: absolute;
-      top: 31.1%;
-      left: 64.8%;
-      width: 12.5%;
-      aspect-ratio: 160/184;
-    }
-    .frogpool {
-      position: absolute;
-      top: 32.6%;
-      left: 81.9%;
-      width: 10.2%;
-      aspect-ratio: 130/106;
-    }
-    .fairytree {
-      position: absolute;
-      top: 32.8%;
-      left: 4.4%;
-      width: 10.6%;
-      aspect-ratio: 136/193;
-    }
-    .wiretower {
-      position: absolute;
-      top: 35.3%;
-      left: 14.8%;
-      width: 6.5%;
-      aspect-ratio: 83/168;
-    }
-    .aliceshouse {
-      position: absolute;
-      top: 35.4%;
-      left: 45.1%;
-      width: 11%;
-      aspect-ratio: 141/103;
-    }
-    .marisashouse {
-      position: absolute;
-      top: 36.1%;
-      left: 61.5%;
-      width: 9.5%;
-      aspect-ratio: 122/78;
-    }
-    .scarletmansion {
-      position: absolute;
-      top: 37.3%;
-      left: 68.0%;
-      width: 23.4%;
-      aspect-ratio: 300/162;
-    }
-    .kourindou {
-      position: absolute;
-      top: 38.8%;
-      left: 15.2%;
-      width: 17.3%;
-      aspect-ratio: 221/106;
-    }
-    .sungarden {
-      position: absolute;
-      top: 40.4%;
-      left: 2.9%;
-      width: 38.3%;
-      aspect-ratio: 490/240;
-    }
-    .lake {
-      position: absolute;
-      top: 39.5%;
-      left: 42.2%;
-      width: 51.8%;
-      aspect-ratio: 663/148;
-    }
-    .mouseshrine {
-      position: absolute;
-      top: 42.5%;
-      left: 65%;
-      width: 5.7%;
-      aspect-ratio: 73/63;
-    }
-    .setdownpool {
-      position: absolute;
-      top: 44.7%;
-      left: 32.8%;
-      width: 14.9%;
-      aspect-ratio: 191/140;
-    }
-    .ship {
-      position: absolute;
-      top: 44.6%;
-      left: 70.2%;
-      width: 15.3%;
-      aspect-ratio: 196/140;
-    }
-    .village {
-      position: absolute;
-      top: 46.7%;
-      left: 11.1%;
-      width: 83.8%;
-      aspect-ratio: 1073/559;
-    }
-    .aqshouse {
-      position: absolute;
-      top: 47.9%;
-      left: 47.7%;
-      width: 21.6%;
-      aspect-ratio: 277/120;
-    }
-    .ryuujin {
-      position: absolute;
-      top: 51.4%;
-      left: 43.5%;
-      width: 8.7%;
-      aspect-ratio: 111/82;
-    }
-    .suzunaan {
-      position: absolute;
-      top: 50.7%;
-      left: 69.5%;
-      width: 6.1%;
-      aspect-ratio: 78/60;
-    }
-    .temple {
-      position: absolute;
-      top: 53.8%;
-      left: 12.2%;
-      width: 23.1%;
-      aspect-ratio: 296/189;
-    }
-    .washfoot {
-      position: absolute;
-      top: 55.1%;
-      left: 42.5%;
-      width: 8.1%;
-      aspect-ratio: 104/72;
-    }
-    .hakureshrine {
-      position: absolute;
-      top: 56.1%;
-      left: 64.3%;
-      width: 18.7%;
-      aspect-ratio: 239/135;
-    }
-    .fairyshouse {
-      position: absolute;
-      top: 54.8%;
-      left: 82.3%;
-      width: 8.6%;
-      aspect-ratio: 1;
-    }
-    .shinreimausoleum {
-      position: absolute;
-      top: 57.4%;
-      left: 4.7%;
-      width: 15.4%;
-      aspect-ratio: 197/278;
-    }
-    .path {
-      position: absolute;
-      top: 58.2%;
-      left: 48.9%;
-      width: 16.2%;
-      aspect-ratio: 207/151;
-    }
-    .houseeternity {
-      position: absolute;
-      top: 62.3%;
-      left: 22.3%;
-      width: 15.6%;
-      aspect-ratio: 2;
-    }
-    .bamboo {
-      position: absolute;
-      top: 62%;
-      left: 14.1%;
-      width: 56.9%;
-      aspect-ratio: 728/205;
-    }
-    .castle {
-      position: absolute;
-      top: 63.6%;
-      left: 10.5%;
-      width: 18%;
-      aspect-ratio: 231/325;
-    }
-    .muenzuka {
-      position: absolute;
-      top: 64.6%;
-      left: 48.4%;
-      width: 46.9%;
-      aspect-ratio: 3;
-    }
-    .otherworld {
-      position: absolute;
-      top: 68.9%;
-      left: 28.3%;
-      width: 58.2%;
-      aspect-ratio: 745/218;
-    }
-    .oldhell {
-      position: absolute;
-      top: 71.9%;
-      left: 26%;
-      width: 68.9%;
-      aspect-ratio: 882/671;
-    }
-    .chireipalace {
-      position: absolute;
-      top: 73.5%;
-      left: 50%;
-      width: 13.7%;
-      aspect-ratio: 175/274;
-    }
-    .reactor {
-      position: absolute;
-      top: 81%;
-      left: 32%;
-      width: 45.5%;
-      aspect-ratio: 582/425;
-    }
-    .tiryagyoniworld {
-      position: absolute;
-      top: 86.8%;
-      left: 20.3%;
-      width: 73.1%;
-      aspect-ratio: 936/747;
-    }
-    .primateszoo {
-      position: absolute;
-      top: 90.5%;
-      left: 45.9%;
-      width: 17.3%;
-      aspect-ratio: 221/275;
-    }
-    .forest {
-      position: absolute;
-      top: 34.5%;
-      left: 11.7%;
-      width: 60.5%;
-      aspect-ratio: 775/289;
-    }
-    .nitunting {
-      position: absolute;
-      top: 48.5%;
-      left: 20%;
-      width: 10.8%;
-      aspect-ratio: 138/87;
-    }
+.root {
+    position: relative;
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+  }
+  .message-box {
+    display:-webkit-box;
+    position: absolute;
+    width: fit-content;
+    max-width: 50%;
+    /* max-height: 300px; */
+    overflow: auto;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
+      -3px -3px 10px rgba(0, 0, 0, 0.1);
+    line-break:auto;
+  }
+  .place {
+    cursor: pointer;
+  }
+
+  /* 导航栏 */
+  /* a:link,
+  a:hover,
+  a:visited,
+  a:active {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    background: #fff;
+  }
+  
+  .card-holder {  
+    position: fixed;
+    width: 0px;
+    overflow: visible;
+  }
+  
+  .card-wrapper {
+    display: inline-block;
+    float: right;
+    clear: both;
+  }
+  
+  .card {
+    position: relative;
+    left: 32px;
+    padding: 16px 32px 16px 64px;
+    margin: 8px;  
+    x-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    transition: all 0.3s ease-in-out 0.1s;
+  }
+  
+  .card:hover {
+    position: relative;
+    left: 100%;
+    margin-left: -32px;
+    box-shadow: 
+      0 -8px 8px -8px rgba(0, 0, 0, 0.5),
+      0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-content {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .bg-01 { background: #539770; }
+  .bg-02 { background: #4B7D74; }
+  .bg-03 { background: #8DC2BC; }
+  .bg-04 { background: #EDD6B4; }
+  .bg-05 { background: #BE7467; }
+  .bg-06 { background: #E2AE63; } */
+  /* 导航栏 */
+
+  .satellitetorifune {
+    position: absolute;
+    top: 0.5%;
+    left: 10%;
+    width: 35%;
+    aspect-ratio: 16/15;
+  }
+  .moon {
+    position: absolute;
+    top: 5.5%;
+    left: 13%;
+    width: 80%;
+    aspect-ratio: 32/31;
+    border-radius: 100%;
+  }
+  .dreamworld {
+    position: absolute;
+    top: 15.4%;
+    left: 7.1%;
+    width: 87.2%;
+    aspect-ratio: 1116/468;
+  }
+  .paradise {
+    position: absolute;
+    top: 21.2%;
+    left: 20.9%;
+    width: 43.8%;
+    aspect-ratio: 561/316;
+  }
+  .underworld {
+    position: absolute;
+    top: 24.3%;
+    left: 68.3%;
+    width: 23.5%;
+    aspect-ratio: 301/226;
+  }
+  .rainbowdragoncave {
+    position: absolute;
+    top: 27.2%;
+    left: 41.5%;
+    width: 5.5%;
+    aspect-ratio: 70/53;
+  }
+  .moriyashrine {
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    width: 31.6%;
+    aspect-ratio: 405/116;
+  }
+  .kasenszone {
+    position: absolute;
+    top: 29.1%;
+    left: 11.8%;
+    width: 11.2%;
+    aspect-ratio: 143/82;
+  }
+  .ropeway {
+    position: absolute;
+    top: 30%;
+    left: 27.7%;
+    width: 7.3%;
+    aspect-ratio: 94/137;
+  }
+  .waterfall {
+    position: absolute;
+    top: 29.7%;
+    left: 51.7%;
+    width: 11.8%;
+    aspect-ratio: 151/304;
+  }
+  .kappasmarket {
+    position: absolute;
+    top: 31.1%;
+    left: 64.8%;
+    width: 12.5%;
+    aspect-ratio: 160/184;
+  }
+  .frogpool {
+    position: absolute;
+    top: 32.6%;
+    left: 81.9%;
+    width: 10.2%;
+    aspect-ratio: 130/106;
+  }
+  .fairytree {
+    position: absolute;
+    top: 32.8%;
+    left: 4.4%;
+    width: 10.6%;
+    aspect-ratio: 136/193;
+  }
+  .wiretower {
+    position: absolute;
+    top: 35.3%;
+    left: 14.8%;
+    width: 6.5%;
+    aspect-ratio: 83/168;
+  }
+  .aliceshouse {
+    position: absolute;
+    top: 35.4%;
+    left: 45.1%;
+    width: 11%;
+    aspect-ratio: 141/103;
+  }
+  .marisashouse {
+    position: absolute;
+    top: 36.1%;
+    left: 61.5%;
+    width: 9.5%;
+    aspect-ratio: 122/78;
+  }
+  .scarletmansion {
+    position: absolute;
+    top: 37.3%;
+    left: 68.0%;
+    width: 23.4%;
+    aspect-ratio: 300/162;
+  }
+  .kourindou {
+    position: absolute;
+    top: 38.8%;
+    left: 15.2%;
+    width: 17.3%;
+    aspect-ratio: 221/106;
+  }
+  .sungarden {
+    position: absolute;
+    top: 40.4%;
+    left: 2.9%;
+    width: 38.3%;
+    aspect-ratio: 490/240;
+  }
+  .lake {
+    position: absolute;
+    top: 39.5%;
+    left: 42.2%;
+    width: 51.8%;
+    aspect-ratio: 663/148;
+  }
+  .mouseshrine {
+    position: absolute;
+    top: 42.5%;
+    left: 65%;
+    width: 5.7%;
+    aspect-ratio: 73/63;
+  }
+  .setdownpool {
+    position: absolute;
+    top: 44.7%;
+    left: 32.8%;
+    width: 14.9%;
+    aspect-ratio: 191/140;
+  }
+  .ship {
+    position: absolute;
+    top: 44.6%;
+    left: 70.2%;
+    width: 15.3%;
+    aspect-ratio: 196/140;
+  }
+  .village {
+    position: absolute;
+    top: 46.7%;
+    left: 11.1%;
+    width: 83.8%;
+    aspect-ratio: 1073/559;
+  }
+  .aqshouse {
+    position: absolute;
+    top: 47.9%;
+    left: 47.7%;
+    width: 21.6%;
+    aspect-ratio: 277/120;
+  }
+  .ryuujin {
+    position: absolute;
+    top: 51.4%;
+    left: 43.5%;
+    width: 8.7%;
+    aspect-ratio: 111/82;
+  }
+  .suzunaan {
+    position: absolute;
+    top: 50.7%;
+    left: 69.5%;
+    width: 6.1%;
+    aspect-ratio: 78/60;
+  }
+  .temple {
+    position: absolute;
+    top: 53.8%;
+    left: 12.2%;
+    width: 23.1%;
+    aspect-ratio: 296/189;
+  }
+  .washfoot {
+    position: absolute;
+    top: 55.1%;
+    left: 42.5%;
+    width: 8.1%;
+    aspect-ratio: 104/72;
+  }
+  .hakureshrine {
+    position: absolute;
+    top: 56.1%;
+    left: 64.3%;
+    width: 18.7%;
+    aspect-ratio: 239/135;
+  }
+  .fairyshouse {
+    position: absolute;
+    top: 54.8%;
+    left: 82.3%;
+    width: 8.6%;
+    aspect-ratio: 1;
+  }
+  .shinreimausoleum {
+    position: absolute;
+    top: 57.4%;
+    left: 4.7%;
+    width: 15.4%;
+    aspect-ratio: 197/278;
+  }
+  .path {
+    position: absolute;
+    top: 58.2%;
+    left: 48.9%;
+    width: 16.2%;
+    aspect-ratio: 207/151;
+  }
+  .houseeternity {
+    position: absolute;
+    top: 62.3%;
+    left: 22.3%;
+    width: 15.6%;
+    aspect-ratio: 2;
+  }
+  .bamboo {
+    position: absolute;
+    top: 62%;
+    left: 14.1%;
+    width: 56.9%;
+    aspect-ratio: 728/205;
+  }
+  .castle {
+    position: absolute;
+    top: 63.6%;
+    left: 10.5%;
+    width: 18%;
+    aspect-ratio: 231/325;
+  }
+  .muenzuka {
+    position: absolute;
+    top: 64.6%;
+    left: 48.4%;
+    width: 46.9%;
+    aspect-ratio: 3;
+  }
+  .otherworld {
+    position: absolute;
+    top: 68.9%;
+    left: 28.3%;
+    width: 58.2%;
+    aspect-ratio: 745/218;
+  }
+  .oldhell {
+    position: absolute;
+    top: 71.9%;
+    left: 26%;
+    width: 68.9%;
+    aspect-ratio: 882/671;
+  }
+  .chireipalace {
+    position: absolute;
+    top: 73.5%;
+    left: 50%;
+    width: 13.7%;
+    aspect-ratio: 175/274;
+  }
+  .reactor {
+    position: absolute;
+    top: 81%;
+    left: 32%;
+    width: 45.5%;
+    aspect-ratio: 582/425;
+  }
+  .tiryagyoniworld {
+    position: absolute;
+    top: 86.8%;
+    left: 20.3%;
+    width: 73.1%;
+    aspect-ratio: 936/747;
+  }
+  .primateszoo {
+    position: absolute;
+    top: 90.5%;
+    left: 45.9%;
+    width: 17.3%;
+    aspect-ratio: 221/275;
+  }
+  .forest {
+    position: absolute;
+    top: 34.5%;
+    left: 11.7%;
+    width: 60.5%;
+    aspect-ratio: 775/289;
+  }
+  .nitunting {
+    position: absolute;
+    top: 48.5%;
+    left: 20%;
+    width: 10.8%;
+    aspect-ratio: 138/87;
+  }
   </style>
 </html>
