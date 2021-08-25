@@ -8,7 +8,13 @@
     <title>GensoKyoMap</title>
   </head>
     <body ondragstart="return false">
-    <div class="root">
+      <!-- <audio id="music1" controls="controls" autoplay="autoplay" preload id="music1" hidden>
+        <source src="music/bgmusic.mp3" />
+      </audio> -->
+        <!--这里是音乐-->
+      <!-- <img id="btn" class="active" src="img/music.png" alt="" /> -->
+        <!-- 这里是一个可以控制背景音乐播放暂停的开关 -->
+      <div class="root">
       <img src="./assets/分层改.png" class="image" />
       <div id="place" class="place satellitetorifune"></div>
       <div id="place" class="place dreamworld"></div>
@@ -58,6 +64,7 @@
     </div>
     <div class="message-box"></div>
   </body>
+  <!-- 禁止右键 -->
   <script language="JavaScript"> 
     //<!-- 
     if (window.Event) 
@@ -84,9 +91,10 @@
     document.onmousedown = norightclick; // for all others 
     //--> 
   </script>
+  <!-- 主体脚本 -->
   <script>
     const satellitetorifune =
-    "<strong><font size=5 color=red>卫星空间站鸟船</font></strong><p>在近未来的某个时间，人类发射的宇宙空间站。<br>鸟船上搭载了一个完整的，并且经过人工挑选与优化的动植物生态系统。在宇宙环境中进行生态循环实验，借此寻找改造地球环境的方案参考，这就是鸟船的目的。<br>或许是为了祈求平安运行，空间站中搭建了一座天鸟船神社。<br>然而，因为原因不明的机械故障，现在的鸟船已经变成了失去功能的太空垃圾，漂浮在地月系的其中一个拉格朗日点上。虽然失去了原有的功能，但是鸟船上的生态系统仍然保持着循环和演化：植物脱离人工控制，形成了盘根错节的丛林；封闭环境加上宇宙辐射，生物大都独立演化成了地球上没有的亚种，甚至突变进化出了类似奇美拉一样的有翼猫型生物，也有地球不存在的新种病毒。<br>专家学者们揶揄道：“日本的技术人员花了那么多钱，结果只是在宇宙中建造了一座遗迹。”故此，这座废弃的空间站也被称为“鸟船遗迹”。";
+    "<strong><font size=5>卫星空间站鸟船</font></strong><p>在近未来的某个时间，人类发射的宇宙空间站。<br>鸟船上搭载了一个完整的，并且经过人工挑选与优化的动植物生态系统。在宇宙环境中进行生态循环实验，借此寻找改造地球环境的方案参考，这就是鸟船的目的。<br>或许是为了祈求平安运行，空间站中搭建了一座天鸟船神社。<br>然而，因为原因不明的机械故障，现在的鸟船已经变成了失去功能的太空垃圾，漂浮在地月系的其中一个拉格朗日点上。虽然失去了原有的功能，但是鸟船上的生态系统仍然保持着循环和演化：植物脱离人工控制，形成了盘根错节的丛林；封闭环境加上宇宙辐射，生物大都独立演化成了地球上没有的亚种，甚至突变进化出了类似奇美拉一样的有翼猫型生物，也有地球不存在的新种病毒。<br>专家学者们揶揄道：“日本的技术人员花了那么多钱，结果只是在宇宙中建造了一座遗迹。”故此，这座废弃的空间站也被称为“鸟船遗迹”。";
     const Moon =
     "Moon";
     const dreamworld =
@@ -224,10 +232,28 @@
     };
     const place = $(".place");
     const messageBox = $(".message-box");
+    // var audio = document.getElementById('music1');
+    // $("#btn").bind("touchstart", function bf() {
+    // if(audio !== null) {
+    // //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+    // alert(audio.paused);
+    // if(audio.paused) {
+    // audio.play(); //audio.play();// 这个就是播放
+    // $("#btn").addClass("active")
+    // } else {
+    // audio.pause(); // 这个就是暂停
+    // $("#btn").removeClass("active")
+    // }
+    // }
+    // })
+
     place.on("click", (event) => {
       messageBox.css({ top: event.pageY, display: "initial" });
       messageBox.html(mapText[event.target.className.split(" ")[1]]);
       // Judge whether the cursor is on the left or right to make the message box display position
+      if (mapText[event.target.className.split(" ")[0]]){
+
+      }
       if (event.pageX < $(document).width() / 2)
         messageBox.css({ left: event.pageX, right: "" });
       else
@@ -256,7 +282,7 @@
       overflow: auto;
       border-radius: 10px;
       backdrop-filter: blur(2px);
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 10px;
       box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1),
         -3px -3px 10px rgba(0, 0, 0, 0.1);
