@@ -2,57 +2,102 @@
   a:hover,
   a:visited,
   a:active {
-    color: #fff;
-    text-decoration: none;
+      color: #fff;
+      text-decoration: none;
   }
-    
-  .card-holder {  
-    position: fixed;
-    width: 0px;
-    right: 0px;
-    overflow: visible;
-    z-index: 9999;
+  
+  .card-holder {
+      position: fixed;
+      width: 0px;
+      right: 0px;
+      overflow: visible;
+      z-index: 9999;
   }
   
   .card-wrapper {
-    display: inline-block;
-    float: left;
-    clear: both;
+      display: block;
+      float: left;
+      clear: both;
   }
   
   .card {
-    position: relative;
-    right: 32px;
-    padding: 16px 64px 16px 32px;
-    margin: 8px;  
-    box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
-    background: #fff;
-    transition: all 0.3s ease-in-out 0.1s;
+      position: relative;
+      right: 32px;
+      padding: 16px 64px 16px 32px;
+      margin: 8px;
+      box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+      background: #fff;
+      transition: all 0.3s ease-in-out 0.1s;
+  }
+  
+  .seccard {
+      position: relative;
+      right: 0px;
+      box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+      padding: 16px 32px 16px 32px;
+      transition-delay: 1s;
+      transition: max-height 0.3s;
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.3s ease-in-out;
   }
   
   .card:hover {
-    position: relative;
-    right: 100%;
-    margin-right: -32px;
-    box-shadow: 
-      0 -8px 8px -8px rgba(0, 0, 0, 0.5),
-      0 8px 8px -8px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-in-out;
+      position: relative;
+      right: 100%;
+      margin-right: -32px;
+      box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover~.seccard {
+      position: relative;
+      right: 80%;
+      margin-right: -32px;
+      box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+      transition-delay: 1s;
+      transition: all 0.3s ease-in-out;
+      max-height: var(--max-height);
   }
   
   .card-content {
-    display: inline-block;
-    color: #fff;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    white-space: nowrap;
+      display: inline-block;
+      color: #fff;
+      font-family: 'Droid Sans', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      white-space: nowrap;
   }
   
-  .bg-01 { background: #539770; }
-  .bg-02 { background: #4B7D74; }
-  .bg-03 { background: #8DC2BC; }
-  .bg-04 { background: #EDD6B4; }
-  .bg-05 { background: #BE7467; }
-  .bg-06 { background: #E2AE63; }
-    /* 导航栏 */
+  .seccard-content {
+      display: inline-block;
+      color: #fff;
+      font-family: 'Droid Sans', sans-serif;
+      font-size: 12px;
+      white-space: nowrap;
+  }
+  
+  .bg-01 {
+      background: #4169E1;
+  }
+  
+  .bg-02 {
+      background: #008B45;
+  }
+  
+  .bg-03 {
+      background: #DAA520;
+  }
+  
+  .bg-04 {
+      background: #FF6A6A;
+  }
+  
+  .bg-05 {
+      background: #FF69B4;
+  }
+  
+  .sec-01 {
+      background: #4169E1;
+  }
+  /* 导航栏 */
