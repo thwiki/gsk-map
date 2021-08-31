@@ -19,6 +19,7 @@
       float: left;
       clear: both;
   }
+  /* 主标题 */
   
   .card {
       position: relative;
@@ -29,6 +30,7 @@
       background: #fff;
       transition: all 0.3s ease-in-out 0.1s;
   }
+  /* 副标题 */
   
   .seccard {
       position: relative;
@@ -39,6 +41,7 @@
       overflow: hidden;
       max-height: 0;
   }
+  /* 主标题动效 */
   
   .card:hover {
       position: relative;
@@ -46,6 +49,7 @@
       margin-right: -32px;
       box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
   }
+  /* 主标题连携副标题动效 */
   
   .card:hover~.seccard {
       position: relative;
@@ -55,6 +59,7 @@
       transition-delay: 0.3s;
       max-height: var(--max-height);
   }
+  /* 主标题文字样式 */
   
   .card-content {
       display: inline-block;
@@ -64,6 +69,7 @@
       font-weight: bold;
       white-space: nowrap;
   }
+  /* 副标题文字样式 */
   
   .seccard-content {
       display: inline-block;
@@ -72,6 +78,7 @@
       font-size: 12px;
       white-space: nowrap;
   }
+  /* 各标题底色 */
   
   .bg-01 {
       background: #4169E1;

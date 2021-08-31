@@ -13,51 +13,61 @@
 <body ondragstart="return false">
     <!-- 导航栏 -->
     <div class='card-holder'>
+        <!-- 第一栏 -->
         <div class='card-wrapper'>
             <a href='#'>
                 <div class='card bg-01'>
                     <span class='card-content'>天空之中</span>
                 </div>
+                <!-- 副标题1 -->
                 <div class="seccard sec-01">
                     <span class="seccard-content">123456<br>654321</span>
                 </div>
             </a>
         </div>
+        <!-- 第二栏 -->
         <div class='card-wrapper'>
             <a href='#'>
                 <div class='card bg-02'>
                     <span class='card-content'>山&森林</span>
                 </div>
+                <!-- 副标题2 -->
                 <div class="seccard sec-02">
                     <span class="seccard-content">123456<br>654321</span>
                 </div>
             </a>
         </div>
+        <!-- 第三栏 -->
         <div class='card-wrapper'>
             <a href='#'>
                 <div class='card bg-03'>
                     <span class='card-content'>人类村落</span>
                 </div>
+                <!-- 副标题3 -->
                 <div class="seccard sec-03">
                     <span class="seccard-content">123456<br>654321</span>
                 </div>
             </a>
         </div>
+        <!-- 第四栏 -->
         <div class='card-wrapper'>
             <a href='#'>
                 <div class='card bg-04'>
                     <span class='card-content'>神社周边</span>
                 </div>
+                <!-- 副标题4 -->
                 <div class="seccard sec-04">
                     <span class="seccard-content">123456<br>654321</span>
                 </div>
             </a>
         </div>
+        <!-- 第五栏 -->
         <div class='card-wrapper'>
             <a href='#'>
                 <div class='card bg-05'>
                     <span class='card-content'>彼世</span>
                 </div>
+                <!-- 副标题5 -->
                 <div class="seccard sec-05">
                     <span class="seccard-content">123456<br>654321</span>
                 </div>
@@ -327,6 +337,7 @@
     // }
     // })
 
+    // 点击出现messagebox实现
     place.on("click", (event) => {
         messageBox.css({
             top: event.pageY,
@@ -353,6 +364,9 @@
         if (event.target.id === "place") return;
         messageBox.css("display", "none");
     });
+</script>
+<!-- 副标题高度变化动效脚本 -->
+<script>
     var seccard = document.querySelector('.seccard')
     var height = seccard.scrollHeight
     seccard.style.setProperty('--max-height', height + 'px')
