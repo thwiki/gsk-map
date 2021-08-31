@@ -35,11 +35,9 @@
       right: 0px;
       box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
       padding: 16px 32px 16px 32px;
-      transition-delay: 1s;
-      transition: max-height 0.3s;
+      transition: max-height 0.3s, all 0.3s ease-in-out;
       overflow: hidden;
       max-height: 0;
-      transition: all 0.3s ease-in-out;
   }
   
   .card:hover {
@@ -47,16 +45,14 @@
       right: 100%;
       margin-right: -32px;
       box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease-in-out;
   }
   
   .card:hover~.seccard {
       position: relative;
-      right: 80%;
+      right: 90%;
       margin-right: -32px;
       box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-      transition-delay: 1s;
-      transition: all 0.3s ease-in-out;
+      transition-delay: 0.3s;
       max-height: var(--max-height);
   }
   
@@ -99,5 +95,21 @@
   
   .sec-01 {
       background: #4169E1;
+  }
+  
+  .sec-02 {
+      background: #008B45;
+  }
+  
+  .sec-03 {
+      background: #DAA520;
+  }
+  
+  .sec-04 {
+      background: #FF6A6A;
+  }
+  
+  .sec-05 {
+      background: #FF69B4;
   }
   /* 导航栏 */
