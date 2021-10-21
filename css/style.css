@@ -1,26 +1,25 @@
-  a:link,
-  a:hover,
-  a:visited,
-  a:active {
+  a:link, a:hover, a:visited, a:active {
       color: #fff;
       text-decoration: none;
   }
-  
+
   .card-holder {
+      cursor: pointer;
       position: fixed;
       width: 0px;
       right: 0px;
       overflow: visible;
       z-index: 9999;
   }
-  
+
   .card-wrapper {
       display: block;
       float: left;
       clear: both;
   }
+
   /* 主标题 */
-  
+
   .card {
       position: relative;
       right: 32px;
@@ -30,38 +29,43 @@
       background: #fff;
       transition: all 0.3s ease-in-out 0.1s;
   }
+
   /* 副标题 */
-  
+
   .seccard {
       position: relative;
       right: 16px;
       box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
-      padding: 16px 32px 16px 32px;
       transition-delay: 1s;
       transition: max-height, all ease-in-out 1s;
       transition-duration: 0.3s;
       overflow: hidden;
       max-height: 0;
   }
+
   /* 主标题动效 */
-  
+
   .card:hover {
       position: relative;
       right: 100%;
       margin-right: -32px;
       box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
   }
+
   /* 主标题连携副标题动效 */
-  
+
   .card:hover~.seccard {
       position: relative;
       right: 90%;
       margin-right: -32px;
-      box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+      /* box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5); */
       max-height: var(--max-height);
+      padding: 2px 8px 2px 8px;
+      background: gray;
   }
+
   /* 主标题文字样式 */
-  
+
   .card-content {
       display: inline-block;
       color: #fff;
@@ -70,8 +74,9 @@
       font-weight: bold;
       white-space: nowrap;
   }
+
   /* 副标题文字样式 */
-  
+
   .seccard-content {
       display: inline-block;
       color: #fff;
@@ -79,45 +84,373 @@
       font-size: 12px;
       white-space: nowrap;
   }
+
   /* 各标题底色 */
-  
+
   .bg-01 {
       background: #4169E1;
   }
-  
+
   .bg-02 {
       background: #008B45;
   }
-  
+
   .bg-03 {
       background: #DAA520;
   }
-  
+
   .bg-04 {
       background: #FF6A6A;
   }
-  
+
   .bg-05 {
       background: #FF69B4;
   }
-  
+
   .sec-01 {
       background: #4169E1;
   }
-  
+
   .sec-02 {
       background: #008B45;
   }
-  
+
   .sec-03 {
       background: #DAA520;
   }
-  
+
   .sec-04 {
       background: #FF6A6A;
   }
-  
+
   .sec-05 {
       background: #FF69B4;
   }
-  /* 导航栏 */
+
+  .root {
+      position: relative;
+      width: 100%;
+  }
+
+  .image {
+      width: 100%;
+  }
+
+  .message-box {
+      display: initial;
+      position: absolute;
+      width: fit-content;
+      max-width: 50%;
+      /* max-height: 300px; */
+      overflow: auto;
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(0, 0, 0, 0.1);
+      line-break: auto;
+  }
+
+  .place {
+      cursor: pointer;
+  }
+
+  .place:hover {
+      box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.4);
+      transition: all 0.4s ease-in-out;
+  }
+
+  .music {
+      z-index: 2000;
+      position: fixed;
+  }
+
+  .music svg {
+      fill: #929292;
+  }
+
+  .music.play svg {
+      fill: #1296db;
+  }
+
+  .buyMap {
+      margin-top: 2rem;
+      position: fixed;
+      z-index: 2000;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #eee;
+      text-shadow: -1px 0 0.4rem rgb(255, 196, 0), 0 1px 0.4rem rgb(255, 196, 0), 1px 0 0.4rem rgb(255, 196, 0), 0 -1px 0.4rem rgb(255, 196, 0);
+  }
+
+  .buyMap:hover {
+    text-shadow: -1px 0 0.4rem rgb(209, 161, 4), 0 1px 0.4rem rgb(209, 161, 4), 1px 0 0.4rem rgb(209, 161, 4), 0 -1px 0.4rem rgb(209, 161, 4);
+    cursor: pointer;
+}
+
+  /* 设置背景颜色 */
+
+  .loadding {
+      width: 40%;
+      margin: auto;
+  }
+
+  .loadding, .card-holder, .music, .root {
+      animation: fade-in 1s;
+  }
+
+  @keyframes fade-in {
+      0% {
+          opacity: 0;
+      }
+      /*初始状态 透明度为0*/
+      40% {
+          opacity: 0.4;
+      }
+      /*过渡状态 透明度为0.4*/
+      100% {
+          opacity: 1;
+      }
+      /*结束状态 透明度为1*/
+  }
+
+  @keyframes fade-out {
+      0% {
+          opacity: 1;
+      }
+      /*初始状态 透明度为1*/
+      40% {
+          opacity: 0.6;
+      }
+      /*过渡状态 透明度为0.6*/
+      100% {
+          opacity: 0;
+      }
+      /*结束状态 透明度为0*/
+  }
+
+  /* 设置box的大小和位置 */
+
+  .head {
+      width: 150px;
+      height: 150px;
+      margin: 200px auto;
+  }
+
+  .shadow {
+      width: 150px;
+      height: 11px;
+      margin: auto;
+      position: relative;
+      top: 30px;
+  }
+
+  .shadow span {
+      display: block;
+      width: 50%;
+      height: 62%;
+      margin: auto;
+      background: #9b9b9b3d;
+      border-radius: 50%;
+      animation: shadow 2s infinite linear;
+  }
+
+  /* 阴影的属性以及动画设置 */
+
+  @keyframes shadow {
+      0% {
+          width: 52%;
+      }
+      25% {
+          width: 32%;
+      }
+      50% {
+          width: 12%;
+      }
+      75% {
+          width: 32%;
+      }
+      100% {
+          width: 52%;
+      }
+  }
+
+  .yinyang {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(to bottom, #eee 0%, #eee 50%, red 50%, red 100%);
+      border: 1px solid red;
+      border-radius: 50%;
+      animation: turn 5s linear infinite;
+  }
+
+  .yinyang>.red {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: red;
+      top: 40px;
+      left: 0;
+  }
+
+  .yinyang>.white {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: #eee;
+      top: 40px;
+      right: 0;
+  }
+
+  .yinyang .point {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 25px;
+      left: 22px;
+  }
+
+  @keyframes turn {
+      0% {
+          -webkit-transform: rotate(0deg);
+      }
+      25% {
+          -webkit-transform: rotate(90deg);
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+      }
+      75% {
+          -webkit-transform: rotate(270deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+      }
+  }
+
+  .load {
+      display: block;
+      width: 150px;
+      line-height: 20px;
+      /* 行高 */
+      letter-spacing: 5px;
+      /* 字间距 */
+      border-radius: 18px;
+      /* 圆角设置 */
+      position: relative;
+      top: 70px;
+      margin: auto;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 17.5px;
+  }
+
+  .load p {
+      animation: typing 1s steps(22), blink 2s infinite linear;
+      display: inline-block;
+      background-image: linear-gradient(to top right, rgb(27, 209, 255), rgb(236, 29, 255));
+      /* 渐变颜色，对角 */
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+
+  /* loading渐变字体，依次输出动画 */
+
+  @keyframes typing {
+      from {
+          width: 0;
+      }
+  }
+
+  .load span {
+      display: inline-block;
+      background-image: linear-gradient(to top right, rgb(27, 209, 255), rgb(236, 29, 255));
+      width: 3px;
+      height: 3px;
+      margin-left: 3px;
+      border-radius: 50%;
+      animation: dian 2.2s infinite linear;
+  }
+
+  /* 设置点的属性 */
+
+  @keyframes dian {
+      0% {
+          transform: scale(1);
+          opacity: 0;
+      }
+      25% {
+          transform: scale(1.6);
+          opacity: 0.6;
+      }
+      50% {
+          transform: scale(2);
+          opacity: 1;
+      }
+      75% {
+          transform: scale(1.6);
+          opacity: 0.6;
+      }
+      100% {
+          transform: scale(1);
+          opacity: 0;
+      }
+  }
+
+  .load span:nth-child(2) {
+      /* class名 span的第二个孩子 */
+      animation-delay: 0.8s;
+      /* 延时动画属性 */
+  }
+
+  .load span:nth-child(3) {
+      animation-delay: 1.6s;
+  }
+
+  .el-message {
+      z-index: 9999!important;
+      min-width: unset;
+  }
+
+  .el-message-box {
+      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 40% !important;
+  }
+
+  .el-message-box__title {
+      text-align: center;
+      font-weight: bold;
+  }
+
+  .el-message-box__content {
+      max-height: 80vh;
+      overflow: auto;
+      font-size: large;
+      text-indent: 2em;
+  }
+
+  @media screen and (max-width: 750px) {
+      .el-message-box {
+          width: 80% !important;
+      }
+  }
+
+  .qrcode {
+      /* background-image: url(/assets/qrcode.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%; */
+      width: 150px;
+      height: 150px;
+      padding-top: 10px;
+      margin: 0 auto;
+  }
+
+  .qrcode img {
+      width: 150px;
+      height: 150px;
+  }
