@@ -139,11 +139,14 @@
   .message-box {
       display: initial;
       position: absolute;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       max-width: 50%;
       /* max-height: 300px; */
       overflow: auto;
       border-radius: 10px;
+      -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
       background-color: rgba(255, 255, 255, 0.7);
       padding: 10px;
@@ -184,9 +187,9 @@
   }
 
   .buyMap:hover {
-    text-shadow: -1px 0 0.4rem rgb(209, 161, 4), 0 1px 0.4rem rgb(209, 161, 4), 1px 0 0.4rem rgb(209, 161, 4), 0 -1px 0.4rem rgb(209, 161, 4);
-    cursor: pointer;
-}
+      text-shadow: -1px 0 0.4rem rgb(209, 161, 4), 0 1px 0.4rem rgb(209, 161, 4), 1px 0 0.4rem rgb(209, 161, 4), 0 -1px 0.4rem rgb(209, 161, 4);
+      cursor: pointer;
+  }
 
   /* 设置背景颜色 */
 
@@ -196,7 +199,23 @@
   }
 
   .loadding, .card-holder, .music, .root {
+      -webkit-animation: fade-in 1s;
       animation: fade-in 1s;
+  }
+
+  @-webkit-keyframes fade-in {
+      0% {
+          opacity: 0;
+      }
+      /*初始状态 透明度为0*/
+      40% {
+          opacity: 0.4;
+      }
+      /*过渡状态 透明度为0.4*/
+      100% {
+          opacity: 1;
+      }
+      /*结束状态 透明度为1*/
   }
 
   @keyframes fade-in {
@@ -212,6 +231,21 @@
           opacity: 1;
       }
       /*结束状态 透明度为1*/
+  }
+
+  @-webkit-keyframes fade-out {
+      0% {
+          opacity: 1;
+      }
+      /*初始状态 透明度为1*/
+      40% {
+          opacity: 0.6;
+      }
+      /*过渡状态 透明度为0.6*/
+      100% {
+          opacity: 0;
+      }
+      /*结束状态 透明度为0*/
   }
 
   @keyframes fade-out {
@@ -252,10 +286,29 @@
       margin: auto;
       background: #9b9b9b3d;
       border-radius: 50%;
+      -webkit-animation: shadow 2s infinite linear;
       animation: shadow 2s infinite linear;
   }
 
   /* 阴影的属性以及动画设置 */
+
+  @-webkit-keyframes shadow {
+      0% {
+          width: 52%;
+      }
+      25% {
+          width: 32%;
+      }
+      50% {
+          width: 12%;
+      }
+      75% {
+          width: 32%;
+      }
+      100% {
+          width: 52%;
+      }
+  }
 
   @keyframes shadow {
       0% {
@@ -282,6 +335,7 @@
       background: linear-gradient(to bottom, #eee 0%, #eee 50%, red 50%, red 100%);
       border: 1px solid red;
       border-radius: 50%;
+      -webkit-animation: turn 5s linear infinite;
       animation: turn 5s linear infinite;
   }
 
@@ -312,6 +366,24 @@
       position: absolute;
       top: 25px;
       left: 22px;
+  }
+
+  @-webkit-keyframes turn {
+      0% {
+          -webkit-transform: rotate(0deg);
+      }
+      25% {
+          -webkit-transform: rotate(90deg);
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+      }
+      75% {
+          -webkit-transform: rotate(270deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+      }
   }
 
   @keyframes turn {
@@ -350,6 +422,7 @@
   }
 
   .load p {
+      -webkit-animation: typing 1s steps(22), blink 2s infinite linear;
       animation: typing 1s steps(22), blink 2s infinite linear;
       display: inline-block;
       background-image: linear-gradient(to top right, rgb(27, 209, 255), rgb(236, 29, 255));
@@ -359,6 +432,12 @@
   }
 
   /* loading渐变字体，依次输出动画 */
+
+  @-webkit-keyframes typing {
+      from {
+          width: 0;
+      }
+  }
 
   @keyframes typing {
       from {
@@ -373,10 +452,34 @@
       height: 3px;
       margin-left: 3px;
       border-radius: 50%;
+      -webkit-animation: dian 2.2s infinite linear;
       animation: dian 2.2s infinite linear;
   }
 
   /* 设置点的属性 */
+
+  @-webkit-keyframes dian {
+      0% {
+          transform: scale(1);
+          opacity: 0;
+      }
+      25% {
+          transform: scale(1.6);
+          opacity: 0.6;
+      }
+      50% {
+          transform: scale(2);
+          opacity: 1;
+      }
+      75% {
+          transform: scale(1.6);
+          opacity: 0.6;
+      }
+      100% {
+          transform: scale(1);
+          opacity: 0;
+      }
+  }
 
   @keyframes dian {
       0% {
@@ -403,11 +506,13 @@
 
   .load span:nth-child(2) {
       /* class名 span的第二个孩子 */
+      -webkit-animation-delay: 0.8s;
       animation-delay: 0.8s;
       /* 延时动画属性 */
   }
 
   .load span:nth-child(3) {
+      -webkit-animation-delay: 1.6s;
       animation-delay: 1.6s;
   }
 
@@ -417,6 +522,7 @@
   }
 
   .el-message-box {
+      -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
       background-color: rgba(255, 255, 255, 0.7);
       width: 40% !important;
@@ -428,7 +534,7 @@
   }
 
   .el-message-box__content {
-      max-height: 80vh;
+      max-height: 70vh;
       overflow: auto;
       font-size: large;
       text-indent: 2em;
@@ -441,16 +547,10 @@
   }
 
   .qrcode {
-      /* background-image: url(/assets/qrcode.png);
+      /* background-image: url(/assets/qrcode.png); */
       background-repeat: no-repeat;
-      background-size: 100% 100%; */
+      background-size: 100% 100%;
       width: 150px;
       height: 150px;
-      padding-top: 10px;
-      margin: 0 auto;
-  }
-
-  .qrcode img {
-      width: 150px;
-      height: 150px;
+      margin: 10px auto 0px auto;
   }
