@@ -755,7 +755,7 @@
 							],
 						},
 					],
-					buyUrl: "https://thwiki.cc",
+					buyUrl: "https://toho.moe/gskMapWJ",
 				};
 			},
 			created() {
@@ -863,7 +863,8 @@
 					this.$alert(
 						`<div class="clear">
                             <p>恭喜你已遍历幻想乡。</p>
-                            <p>点击购买按钮或扫码可参与本幻想乡柱状地图的布制挂轴预售活动。</p>
+							<p>这么好看这么有深度的柱状地图，想不想整个实体版挂轴收藏？</p>
+							<p>点击按钮或扫码可参与本幻想乡柱状地图的布制挂轴购买意向调查问卷。</p>
                             <div class="qrcode" style="background-image:url(${qrcode.toDataURL()})"></div></div>`,
 						"你已经发现了全部地点！",
 						{
@@ -874,8 +875,8 @@
 							showConfirmButton: true,
 							cancelButtonClass: "el-button--danger",
 							confirmButtonClass: "el-button--success",
-							cancelButtonText: "关闭",
-							confirmButtonText: "购买",
+							cancelButtonText: "残忍拒绝",
+							confirmButtonText: "考虑一下",
 							callback: (action) => {
 								if (action == "confirm") {
 									window.open(this.buyUrl);
