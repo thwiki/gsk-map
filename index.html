@@ -75,6 +75,7 @@
 		<audio controls="controls" preload hidden ref="BgmPlayer" loop="loop">
 			<source src="assets/bgm.mp3" />
 		</audio>
+		<!-- 35vw  -->
 		<!--这里是音乐-->
 		<div class="music play" @click="playMusic" ref="musicBtn" style="display: none" v-show="loaded">
 			<svg t="1634609363630" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -87,11 +88,17 @@
 		<div class="buyMap" @click="buy" style="display: none" v-show="clearStatus&&loaded">Clear！！</div>
 		<!-- 这里是一个可以控制背景音乐播放暂停的开关 -->
 		<div class="root" style="display: none" v-show="loaded">
-			<img src="./assets/map.thb.min.jpg" class="image" />
 			<template v-for="map in mapList">
-				<div v-for="submap in map.subMap" :class="'place'+' '+submap.mapID"
-					:style="'position: absolute;top:'+submap.top+';left:'+submap.left+';width:'+submap.width+';aspect-ratio:'+submap.aspect_ratio+';border-radius:'+submap.border_radius+';'"
-					@click="showMsg(submap)" :ref="submap.mapID"></div>
+				<div v-for="submap in map.subMap" :class="'place'+' '+submap.mapID" :style="{
+						position: 'absolute',
+						top: submap.top,
+						left: submap.left,
+						width: submap.width,
+						borderRadius: submap.border_radius,
+						aspectRatio: submap.aspect_ratio,
+						paddingTop: submap.padding_top
+					}" @click="showMsg(submap)" :ref="submap.mapID">
+				</div>
 			</template>
 			<div class="topic">
 				<div class="thblogo">
@@ -104,6 +111,7 @@
 					<p>illustrator:黄瓜(PIXIV 6681779)</p>
 				</div>
 			</div>
+			<img src="./assets/map.thb.min.jpg" class="image" />
 		</div>
 	</div>
 </body>
@@ -152,6 +160,7 @@
 									top: "0.5%",
 									left: "10%",
 									width: "35%",
+									padding_top: "",
 									aspect_ratio: "16/15",
 									border_radius: "",
 								},
@@ -164,6 +173,7 @@
 									top: "5.5%",
 									left: "13%",
 									width: "80%",
+									padding_top: "",
 									aspect_ratio: "32/31",
 									border_radius: "100%",
 								},
@@ -176,6 +186,7 @@
 									top: "15.4%",
 									left: "7.1%",
 									width: "87.2%",
+									padding_top: "",
 									aspect_ratio: "1116/468",
 									border_radius: "",
 								},
@@ -188,6 +199,7 @@
 									top: "21.2%",
 									left: "20.9%",
 									width: "43.8%",
+									padding_top: "",
 									aspect_ratio: "561/316",
 									border_radius: "",
 								},
@@ -200,6 +212,7 @@
 									top: "24.3%",
 									left: "68.3%",
 									width: "23.5%",
+									padding_top: "",
 									aspect_ratio: "301/226",
 									border_radius: "",
 								},
@@ -218,6 +231,7 @@
 									top: "27.2%",
 									left: "41.5%",
 									width: "5.5%",
+									padding_top: "",
 									aspect_ratio: "70/53",
 									border_radius: "",
 								},
@@ -230,6 +244,7 @@
 									top: "28%",
 									left: "7.3%",
 									width: "89.9%",
+									padding_top: "",
 									aspect_ratio: "1151/580",
 									border_radius: "",
 								},
@@ -242,6 +257,7 @@
 									top: "29%",
 									left: "35%",
 									width: "31.6%",
+									padding_top: "",
 									aspect_ratio: "405/116",
 									border_radius: "",
 								},
@@ -254,6 +270,7 @@
 									top: "30%",
 									left: "11.8%",
 									width: "11.2%",
+									padding_top: "",
 									aspect_ratio: "143/92",
 									border_radius: "",
 								},
@@ -266,6 +283,7 @@
 									top: "30%",
 									left: "27.7%",
 									width: "7.3%",
+									padding_top: "",
 									aspect_ratio: "94/137",
 									border_radius: "",
 								},
@@ -278,6 +296,7 @@
 									top: "29.7%",
 									left: "51.7%",
 									width: "11.8%",
+									padding_top: "",
 									aspect_ratio: "151/304",
 									border_radius: "",
 								},
@@ -290,6 +309,7 @@
 									top: "31.5%",
 									left: "64.8%",
 									width: "12.5%",
+									padding_top: "",
 									aspect_ratio: "160/184",
 									border_radius: "",
 								},
@@ -302,6 +322,7 @@
 									top: "34.1%",
 									left: "28%",
 									width: "61.4%",
+									padding_top: "",
 									aspect_ratio: "786/80",
 									border_radius: "",
 								},
@@ -314,6 +335,7 @@
 									top: "32.9%",
 									left: "81.9%",
 									width: "10.2%",
+									padding_top: "",
 									aspect_ratio: "130/106",
 									border_radius: "",
 								},
@@ -326,6 +348,7 @@
 									top: "34.5%",
 									left: "11.7%",
 									width: "70.5%",
+									padding_top: "",
 									aspect_ratio: "904/289",
 									border_radius: "",
 								},
@@ -337,6 +360,7 @@
 									top: "33.3%",
 									left: "4.4%",
 									width: "10.6%",
+									padding_top: "",
 									aspect_ratio: "136/193",
 									border_radius: "",
 								},
@@ -349,6 +373,7 @@
 									top: "35.3%",
 									left: "14.8%",
 									width: "6.5%",
+									padding_top: "",
 									aspect_ratio: "83/168",
 									border_radius: "",
 								},
@@ -361,6 +386,7 @@
 									top: "35.4%",
 									left: "45.1%",
 									width: "11%",
+									padding_top: "",
 									aspect_ratio: "141/103",
 									border_radius: "",
 								},
@@ -373,6 +399,7 @@
 									top: "36.1%",
 									left: "61.5%",
 									width: "9.5%",
+									padding_top: "",
 									aspect_ratio: "122/78",
 									border_radius: "",
 								},
@@ -385,6 +412,7 @@
 									top: "37.3%",
 									left: "68.0%",
 									width: "23.4%",
+									padding_top: "",
 									aspect_ratio: "300/162",
 									border_radius: "",
 								},
@@ -397,6 +425,7 @@
 									top: "38.8%",
 									left: "15.2%",
 									width: "17.3%",
+									padding_top: "",
 									aspect_ratio: "221/106",
 									border_radius: "",
 								},
@@ -409,6 +438,7 @@
 									top: "39.5%",
 									left: "42.2%",
 									width: "51.8%",
+									padding_top: "",
 									aspect_ratio: "663/148",
 									border_radius: "",
 								},
@@ -421,6 +451,7 @@
 									top: "40.4%",
 									left: "2.9%",
 									width: "38.3%",
+									padding_top: "",
 									aspect_ratio: "490/240",
 									border_radius: "",
 								},
@@ -433,6 +464,7 @@
 									top: "41.5%",
 									left: "43.5%",
 									width: "20.7%",
+									padding_top: "",
 									aspect_ratio: "265/81",
 									border_radius: "",
 								},
@@ -445,6 +477,7 @@
 									top: "42.5%",
 									left: "65%",
 									width: "5.7%",
+									padding_top: "",
 									aspect_ratio: "73/63",
 									border_radius: "",
 								},
@@ -463,6 +496,7 @@
 									top: "44.7%",
 									left: "32.8%",
 									width: "14.9%",
+									padding_top: "",
 									aspect_ratio: "191/140",
 									border_radius: "",
 								},
@@ -475,6 +509,7 @@
 									top: "44.6%",
 									left: "70.2%",
 									width: "15.3%",
+									padding_top: "",
 									aspect_ratio: "196/140",
 									border_radius: "",
 								},
@@ -487,6 +522,7 @@
 									top: "46.7%",
 									left: "11.1%",
 									width: "83.8%",
+									padding_top: "",
 									aspect_ratio: "1073/559",
 									border_radius: "",
 								},
@@ -499,6 +535,7 @@
 									top: "47.3%",
 									left: "17.1%",
 									width: "13.9%",
+									padding_top: "",
 									aspect_ratio: "178/78",
 									border_radius: "",
 								},
@@ -511,6 +548,7 @@
 									top: "48.5%",
 									left: "20%",
 									width: "10.8%",
+									padding_top: "",
 									aspect_ratio: "138/87",
 									border_radius: "",
 								},
@@ -523,6 +561,7 @@
 									top: "48.7%",
 									left: "31.0%",
 									width: "12.5%",
+									padding_top: "",
 									aspect_ratio: "160/60",
 									border_radius: "",
 								},
@@ -535,6 +574,7 @@
 									top: "47.9%",
 									left: "47.7%",
 									width: "21.6%",
+									padding_top: "",
 									aspect_ratio: "277/120",
 									border_radius: "",
 								},
@@ -545,8 +585,9 @@
 										"<p>位于人类村落的一家借书屋。除了租借之外，也提供印刷、装订书籍的服务。《幻想乡缘起》便是在此装订的。</p><p>这里藏书丰富，志怪小说、百科图鉴、诗文读本、外界流入的杂志，甚至还有众多的妖魔书。</p><p>妖魔书便是与妖怪相关的书籍。封印着妖怪的、记载着妖怪的、妖怪撰写的文字，都可以视为妖魔书。妖魔书可能封印着危险的妖怪，可能记载了禁忌的知识，甚至有可能书本身就是妖怪，而且大多数妖魔书都使用人类无法理解的文字或者特殊的写法编撰，对一般人来说，最好敬而远之。</p><p>铃奈庵的看板娘是店主的女儿<strong>本居小铃</strong>。小铃有着理解文字的天赋，无论是初次接触的外语还是原始的符号文字，她都能理解其含义。小铃热衷于收集各种妖魔书，不管是不可名状的禁忌教典、邪魔怪异留下的污秽文字，甚至是妖怪随手书写的便签、书信，她都来者不拒，可谓是，拥有着对普通人类来说过于危险的好奇心。也正是因为如此，她经常给自己惹上各种和魍魉魑魅有关的麻烦。</p>",
 									find: false,
 									top: "50.7%",
-									left: "57.5%;",
+									left: "57.5%",
 									width: "6.1%",
+									padding_top: "",
 									aspect_ratio: "78/60",
 									border_radius: "",
 								},
@@ -559,6 +600,7 @@
 									top: "51.4%",
 									left: "43.5%",
 									width: "8.7%",
+									padding_top: "",
 									aspect_ratio: "111/82",
 									border_radius: "",
 								},
@@ -571,6 +613,7 @@
 									top: "53.8%",
 									left: "12.2%",
 									width: "23.1%",
+									padding_top: "",
 									aspect_ratio: "296/189",
 									border_radius: "",
 								},
@@ -583,6 +626,7 @@
 									top: "55.1%",
 									left: "42.5%",
 									width: "8.1%",
+									padding_top: "",
 									aspect_ratio: "104/72",
 									border_radius: "",
 								},
@@ -601,6 +645,7 @@
 									top: "56.1%",
 									left: "64.3%",
 									width: "18.7%",
+									padding_top: "",
 									aspect_ratio: "239/135",
 									border_radius: "",
 								},
@@ -613,6 +658,7 @@
 									top: "54.8%",
 									left: "82.3%",
 									width: "8.6%",
+									padding_top: "",
 									aspect_ratio: "1",
 									border_radius: "",
 								},
@@ -625,6 +671,7 @@
 									top: "57.4%",
 									left: "4.7%",
 									width: "15.4%",
+									padding_top: "",
 									aspect_ratio: "197/278",
 									border_radius: "",
 								},
@@ -637,6 +684,7 @@
 									top: "58.2%",
 									left: "48.9%",
 									width: "16.2%",
+									padding_top: "",
 									aspect_ratio: "207/151",
 									border_radius: "",
 								},
@@ -649,6 +697,7 @@
 									top: "62%",
 									left: "14.1%",
 									width: "56.9%",
+									padding_top: "",
 									aspect_ratio: "728/205",
 									border_radius: "",
 								},
@@ -661,6 +710,7 @@
 									top: "62.3%",
 									left: "22.3%",
 									width: "15.6%",
+									padding_top: "",
 									aspect_ratio: "2",
 									border_radius: "",
 								},
@@ -673,6 +723,7 @@
 									top: "63.6%",
 									left: "10.5%",
 									width: "18%",
+									padding_top: "",
 									aspect_ratio: "231/325",
 									border_radius: "",
 								},
@@ -691,6 +742,7 @@
 									top: "64.6%",
 									left: "48.4%",
 									width: "46.9%",
+									padding_top: "",
 									aspect_ratio: "3",
 									border_radius: "",
 								},
@@ -703,6 +755,7 @@
 									top: "68.9%",
 									left: "28.3%",
 									width: "58.2%",
+									padding_top: "",
 									aspect_ratio: "745/218",
 									border_radius: "",
 								},
@@ -715,6 +768,7 @@
 									top: "71.9%",
 									left: "26%",
 									width: "68.9%",
+									padding_top: "",
 									aspect_ratio: "882/671",
 									border_radius: "",
 								},
@@ -727,6 +781,7 @@
 									top: "73.5%",
 									left: "50%",
 									width: "13.7%",
+									padding_top: "",
 									aspect_ratio: "175/274",
 									border_radius: "",
 								},
@@ -739,6 +794,7 @@
 									top: "81%",
 									left: "32%",
 									width: "45.5%",
+									padding_top: "",
 									aspect_ratio: "582/425",
 									border_radius: "",
 								},
@@ -751,6 +807,7 @@
 									top: "86.8%",
 									left: "20.3%",
 									width: "73.1%",
+									padding_top: "",
 									aspect_ratio: "936/747",
 									border_radius: "",
 								},
@@ -763,6 +820,7 @@
 									top: "90.5%",
 									left: "45.9%",
 									width: "17.3%",
+									padding_top: "",
 									aspect_ratio: "221/275",
 									border_radius: "",
 								},
@@ -775,11 +833,15 @@
 			created() {
 				var _this = this;
 
+				var ar = $("#app audio").css("aspect-ratio");
 				var mapList = this.mapList;
 				mapList.map((v, i) => {
 					v = v.subMap.map((v1, i1) => {
 						if (this.readRec(v1.mapID)) {
 							v1.find = true;
+						}
+						if (!ar) {
+							v1.padding_top = (v1.width.replace("%", "") / eval(v1.aspect_ratio)) + "%";
 						}
 						return v1;
 					});
@@ -804,12 +866,16 @@
 				});
 			},
 			mounted() {
-				if (!this.loaded) {
-					this.loaded = true;
-					this.playMusic();
-				}
+				this.loaded = true;
 			},
 			updated() {
+			},
+			watch: {
+				loaded(newVal) {
+					if (newVal) {
+						this.playMusic();
+					}
+				}
 			},
 			methods: {
 				showMsg(map) {
