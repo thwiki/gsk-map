@@ -57,13 +57,16 @@
 		<!-- 导航栏 -->
 		<div class="card-holder" style="display: none" v-show="loaded">
 			<!-- 第一栏 -->
+			<p>详细地点仅做标记，无跳转</p>
 			<div class="card-wrapper" v-for="map in mapList">
 				<div class="card" :style="'background:'+map.mapColor+';'" @click="moveMap(map)">
 					<span class="card-content" v-text="map.mapName"></span>
 				</div>
-				<div class="seccard" v-for="submap in map.subMap"
-					:style="(submap.find?'background:'+map.mapColor+';':'')">
-					<span class="seccard-content" v-text="submap.mapName"></span>
+				<div class="seccard">
+					<div class="seccard-item" v-for="submap in map.subMap"
+						:style="(submap.find?'background:'+map.mapColor+';':'')">
+						<span class="seccard-content" v-text="submap.mapName"></span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -90,6 +93,17 @@
 					:style="'position: absolute;top:'+submap.top+';left:'+submap.left+';width:'+submap.width+';aspect-ratio:'+submap.aspect_ratio+';border-radius:'+submap.border_radius+';'"
 					@click="showMsg(submap)" :ref="submap.mapID"></div>
 			</template>
+			<div class="topic">
+				<div class="thblogo">
+					<a href="https://thwiki.cc" target="_blank" title="点击进入THBWiki">
+						<img src="./assets/thb.png" />
+					</a>
+				</div>
+				<div class="mzsm">
+					<p>本图内容及说明文本内容均为爱好者根据原作内容收集整理而来，并非官方设定。</p>
+					<p>illustrator:黄瓜(PIXIV 6681779)</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
@@ -732,7 +746,7 @@
 									mapID: "tiryagyoniworld",
 									mapName: "畜生界",
 									mapDesc:
-										"<p>在一般人眼中，畜生界是“地狱”的一部分、一个区域。不过，实际上它与地狱略有不同，可以算作是另一个世界。</p><p>顾名思义，畜生界是属于畜生的世界，即动物灵的世界。动物灵信奉弱肉强食的丛林法则，他们拒绝建立统一的法律和制度，而是各自在有亲近感的强者身边聚集成了帮派，自己制定规则。其中，三个最大的帮派分别是：肉体强健、牙尖爪利的野兽们组成的劲牙组（首领：<strong>骊驹早鬼</strong>）；擅长潜水挖洞、潜伏袭击的猎手们组成的鬼杰组（首领：<strong>吉吊八千慧</strong>）；体型庞大或是能够征服天空的巨兽和猛禽组成的刚欲同盟（首领：<strong>饕餮</strong>）。除此之外，还有一些规模较小的不明组织，如擅长拟态的动物们、擅长制造毒液的动物们、擅长用身体机能制造陷阱守株待兔的动物们等等。</p><p>动物灵们个个自认为无法无天、自由自在，实际上他们的灵魂深处仍然被铭刻着奴性（毕竟他们很大一部分在身前是家畜或者宠物）。其证据就是，他们全都组成了上下关系森严的帮派，服从于帮派的纪律，为所欲为仅仅是表面的假象。虚伪的自由包裹着奴役与服从，这里可谓是真正的地狱。</p><p>畜生界虽然是丛林法则的世界，但是环境却丝毫见不到丛林的影子：到处都是高耸的黑色摩天大楼，窗口闪烁着妖异的红光，灰色的烟雾四处弥漫，仿佛是被恶魔占据的现代都市景象。</p>",
+										"<p>在一般人眼中，畜生界是“地狱”的一部分、一个区域。不过，实际上它与地狱略有不同，可以算作是另一个世界。</p><p>顾名思义，畜生界是属于畜生的世界，即动物灵的世界。动物灵信奉弱肉强食的丛林法则，他们拒绝建立统一的法律和制度，而是各自在有亲近感的强者身边聚集成了帮派，自己制定规则。其中，三个最大的帮派分别是：肉体强健、牙尖爪利的野兽们组成的劲牙组（首领：<strong>骊驹早鬼</strong>）；擅长潜水挖洞、潜伏袭击的猎手们组成的鬼杰组（首领：<strong>吉吊八千慧</strong>）；体型庞大或是能够征服天空的巨兽和猛禽组成的刚欲同盟（首领：<strong>饕餮</strong>）。除此之外，还有一些规模较小的不明组织，如擅长拟态的动物们、擅长制造毒液的动物们、擅长用身体机能制造陷阱守株待兔的动物们等等。</p><p>动物灵们个个自认为无法无天、自由自在，实际上他们的灵魂深处仍然被铭刻着奴性（毕竟他们很大一部分在生前是家畜或者宠物）。其证据就是，他们全都组成了上下关系森严的帮派，服从于帮派的纪律，为所欲为仅仅是表面的假象。虚伪的自由包裹着奴役与服从，这里可谓是真正的地狱。</p><p>畜生界虽然是丛林法则的世界，但是环境却丝毫见不到丛林的影子：到处都是高耸的黑色摩天大楼，窗口闪烁着妖异的红光，灰色的烟雾四处弥漫，仿佛是被恶魔占据的现代都市景象。</p>",
 									find: false,
 									top: "86.8%",
 									left: "20.3%",

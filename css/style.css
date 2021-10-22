@@ -9,7 +9,25 @@
       width: 0px;
       right: 0px;
       overflow: visible;
-      z-index: 9999;
+      z-index: 2000;
+  }
+
+  .card-holder p {
+      margin: 2px 2px 0px 0px;
+      float: right;
+      cursor: auto;
+      text-shadow: -1px 0 0.4rem #2196f3, 0 1px 0.4rem #2196f3, 1px 0 0.4rem #2196f3, 0 -1px 0.4rem #2196f3;
+      color: #fff;
+      width: max-content;
+      max-width: 15vw;
+      pointer-events: none;
+      font-size: 0.8rem;
+  }
+
+  @media screen and (max-width:750px) {
+      .card-holder p {
+          max-width: 25vw;
+      }
   }
 
   .card-wrapper {
@@ -24,7 +42,7 @@
       position: relative;
       right: 32px;
       padding: 16px 64px 16px 32px;
-      margin: 8px;
+      margin: 2px 8px;
       box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
       background: #fff;
       transition: all 0.3s ease-in-out 0.1s;
@@ -43,6 +61,10 @@
       max-height: 0;
   }
 
+  .seccard-item {
+      padding: 2px 8px 2px 8px;
+  }
+
   /* 主标题动效 */
 
   .card:hover {
@@ -55,12 +77,11 @@
   /* 主标题连携副标题动效 */
 
   .card:hover~.seccard {
-      position: relative;
-      right: 90%;
-      margin-right: -32px;
+      position: absolute;
+      /* right: 90%; */
+      margin-right: 12px;
       /* box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5), 0 8px 8px -8px rgba(0, 0, 0, 0.5); */
       max-height: var(--max-height);
-      padding: 2px 8px 2px 8px;
       background: gray;
   }
 
@@ -79,7 +100,7 @@
 
   .seccard-content {
       display: inline-block;
-      color: #fff;
+      color: #e1dfdf;
       font-family: 'Droid Sans', sans-serif;
       font-size: 12px;
       white-space: nowrap;
@@ -553,4 +574,41 @@
       width: 150px;
       height: 150px;
       margin: 10px auto 0px auto;
+  }
+
+  .topic {
+      position: absolute;
+      left: 0.5%;
+      bottom: 0.5%;
+  }
+
+  .topic .thblogo {
+      width: 15vw;
+      height: 17vw;
+  }
+
+  .topic .thblogo img {
+      width: 15vw;
+      height: 17vw;
+  }
+
+  .topic .mzsm {
+      font-size: 1.25vw;
+      font-weight: bold;
+      width: max-content;
+      max-width: 23vw;
+      pointer-events: none;
+  }
+
+  @media screen and (max-width:750px) {
+      .topic .mzsm {
+          font-size: 0.8rem;
+          text-shadow: -1px 0 0.4rem #cf8300, 0 1px 0.4rem #cf8300, 1px 0 0.4rem #cf8300, 0 -1px 0.4rem #cf8300;
+          color: #fff;
+      }
+  }
+
+  .topic .mzsm p {
+      margin: 0.5rem 0px 2px 0px;
+      text-align: justify;
   }
