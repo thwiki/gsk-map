@@ -1,10 +1,14 @@
-  #app audio{
+  #app audio {
       aspect-ratio: 1;
   }
-  
-  a:link, a:hover, a:visited, a:active {
-      color: #fff;
+
+  a:link, a:visited, a:active {
+      color: rgb(27, 141, 255);
       text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(64, 158, 255);
   }
 
   .card-holder {
@@ -563,6 +567,7 @@
       overflow: auto;
       font-size: large;
       text-indent: 2em;
+      text-align: justify;
   }
 
   @media screen and (max-width: 750px) {
