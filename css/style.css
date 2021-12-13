@@ -237,14 +237,17 @@
       0% {
           opacity: 0;
       }
+
       /*初始状态 透明度为0*/
       40% {
           opacity: 0.4;
       }
+
       /*过渡状态 透明度为0.4*/
       100% {
           opacity: 1;
       }
+
       /*结束状态 透明度为1*/
   }
 
@@ -252,14 +255,17 @@
       0% {
           opacity: 0;
       }
+
       /*初始状态 透明度为0*/
       40% {
           opacity: 0.4;
       }
+
       /*过渡状态 透明度为0.4*/
       100% {
           opacity: 1;
       }
+
       /*结束状态 透明度为1*/
   }
 
@@ -267,14 +273,17 @@
       0% {
           opacity: 1;
       }
+
       /*初始状态 透明度为1*/
       40% {
           opacity: 0.6;
       }
+
       /*过渡状态 透明度为0.6*/
       100% {
           opacity: 0;
       }
+
       /*结束状态 透明度为0*/
   }
 
@@ -282,14 +291,17 @@
       0% {
           opacity: 1;
       }
+
       /*初始状态 透明度为1*/
       40% {
           opacity: 0.6;
       }
+
       /*过渡状态 透明度为0.6*/
       100% {
           opacity: 0;
       }
+
       /*结束状态 透明度为0*/
   }
 
@@ -326,15 +338,19 @@
       0% {
           width: 52%;
       }
+
       25% {
           width: 32%;
       }
+
       50% {
           width: 12%;
       }
+
       75% {
           width: 32%;
       }
+
       100% {
           width: 52%;
       }
@@ -344,15 +360,19 @@
       0% {
           width: 52%;
       }
+
       25% {
           width: 32%;
       }
+
       50% {
           width: 12%;
       }
+
       75% {
           width: 32%;
       }
+
       100% {
           width: 52%;
       }
@@ -402,15 +422,19 @@
       0% {
           -webkit-transform: rotate(0deg);
       }
+
       25% {
           -webkit-transform: rotate(90deg);
       }
+
       50% {
           -webkit-transform: rotate(180deg);
       }
+
       75% {
           -webkit-transform: rotate(270deg);
       }
+
       100% {
           -webkit-transform: rotate(360deg);
       }
@@ -420,15 +444,19 @@
       0% {
           -webkit-transform: rotate(0deg);
       }
+
       25% {
           -webkit-transform: rotate(90deg);
       }
+
       50% {
           -webkit-transform: rotate(180deg);
       }
+
       75% {
           -webkit-transform: rotate(270deg);
       }
+
       100% {
           -webkit-transform: rotate(360deg);
       }
@@ -493,18 +521,22 @@
           transform: scale(1);
           opacity: 0;
       }
+
       25% {
           transform: scale(1.6);
           opacity: 0.6;
       }
+
       50% {
           transform: scale(2);
           opacity: 1;
       }
+
       75% {
           transform: scale(1.6);
           opacity: 0.6;
       }
+
       100% {
           transform: scale(1);
           opacity: 0;
@@ -516,18 +548,22 @@
           transform: scale(1);
           opacity: 0;
       }
+
       25% {
           transform: scale(1.6);
           opacity: 0.6;
       }
+
       50% {
           transform: scale(2);
           opacity: 1;
       }
+
       75% {
           transform: scale(1.6);
           opacity: 0.6;
       }
+
       100% {
           transform: scale(1);
           opacity: 0;
@@ -547,7 +583,7 @@
   }
 
   .el-message {
-      z-index: 9999!important;
+      z-index: 9999 !important;
       min-width: unset;
   }
 
@@ -569,6 +605,12 @@
       font-size: large;
       text-indent: 2em;
       text-align: justify;
+  }
+
+  .el-message-box__content pre {
+      white-space: break-spaces;
+      font-family: auto;
+      margin: 0;
   }
 
   @media screen and (max-width: 750px) {

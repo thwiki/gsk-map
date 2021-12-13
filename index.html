@@ -111,7 +111,7 @@
 					<p>illustrator:黄瓜(PIXIV 6681779)</p>
 				</div>
 			</div>
-			<img src="./assets/map.thb.min.jpg" class="image" />
+			<img src="./assets/map.thb2.min.jpg" class="image" ref="background" />
 		</div>
 	</div>
 </body>
@@ -144,6 +144,7 @@
 			el: "#app",
 			data() {
 				return {
+					img: new Image(),
 					loaded: false,
 					clearStatus: false,
 					mapList: [
@@ -1007,7 +1008,7 @@
 							],
 						},
 					],
-					buyUrl: "https://toho.moe/gskMapWJ",
+					buyUrl: "https://toho.moe/tbGskMap",
 				};
 			},
 			created() {
@@ -1044,6 +1045,9 @@
 						_this.test();
 					}
 				});
+				this.img.onload = () => {
+					$(this.$refs.background).attr("src", this.img.src);
+				}
 			},
 			mounted() {
 				this.loaded = true;
@@ -1053,6 +1057,7 @@
 			watch: {
 				loaded(newVal) {
 					if (newVal) {
+						this.img.src = "./assets/map.thb.min.jpg";
 						this.playMusic();
 					}
 				}
@@ -1125,8 +1130,12 @@
 						`<div class="clear">
                             <p>恭喜你已遍历幻想乡。</p>
 							<p>这么好看这么有深度的柱状地图，想不想整个实体版挂轴收藏？</p>
-							<p>点击按钮或扫码可参与本幻想乡柱状地图的布制挂轴购买意向调查问卷。</p>
-                            <div class="qrcode" style="background-image:url(${qrcode.toDataURL()})"></div></div>`,
+							<p>点击按钮或扫码参与下单本幻想乡柱状地图的布制挂轴的预售。</p>
+                            <div class="qrcode" style="background-image:url(${qrcode.toDataURL()})"></div>
+							<p>复制淘口令</p>
+							<pre><b>48嘻上就学下他小他到对和们啊 https://m.tb.cn/h.fRQX9py  【THB 编辑部】东方Project幻想乡地图卷轴预定【囧仙子通贩】</b></pre>
+							<p>到淘宝，即可跳转到购买链接</p>
+							</div>`,
 						"你已经发现了全部地点！",
 						{
 							closeOnClickModal: true,
