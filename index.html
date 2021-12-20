@@ -29,21 +29,21 @@
 	<link rel="icon" href="favicon.ico" />
 	<link rel="shortcut icon" href="shortcut_favicon.ico" />
 	<!-- QQ卡片 -->
-    <meta itemprop="site_name" content="幻想乡地图">
-    <meta itemprop="title" content="幻想乡地图">
-    <meta itemprop="description" content="这是一份来自幻想乡的地图">
-    <meta itemprop="url" content="https://map.thwiki.cc/">
-    <meta itemprop="image" content="https://map.thwiki.cc/assets/thb.png">
-    <meta property="og:site_name" content="幻想乡地图">
-    <meta property="og:title" content="幻想乡地图">
-    <meta property="og:description" content="这是一份来自幻想乡的地图">
-    <meta property="og:url" content="https://map.thwiki.cc/">
-    <meta property="og:image" content="https://map.thwiki.cc/assets/thb.png">
-    <meta property="twitter:site_name" content="幻想乡地图">
-    <meta property="twitter:title" content="幻想乡地图">
-    <meta property="twitter:description" content="这是一份来自幻想乡的地图">
-    <meta property="twitter:url" content="https://map.thwiki.cc/">
-    <meta property="twitter:image" content="https://map.thwiki.cc/assets/thb.png">
+	<meta itemprop="site_name" content="幻想乡地图">
+	<meta itemprop="title" content="幻想乡地图">
+	<meta itemprop="description" content="这是一份来自幻想乡的地图">
+	<meta itemprop="url" content="https://map.thwiki.cc/">
+	<meta itemprop="image" content="https://map.thwiki.cc/assets/thb.png">
+	<meta property="og:site_name" content="幻想乡地图">
+	<meta property="og:title" content="幻想乡地图">
+	<meta property="og:description" content="这是一份来自幻想乡的地图">
+	<meta property="og:url" content="https://map.thwiki.cc/">
+	<meta property="og:image" content="https://map.thwiki.cc/assets/thb.png">
+	<meta property="twitter:site_name" content="幻想乡地图">
+	<meta property="twitter:title" content="幻想乡地图">
+	<meta property="twitter:description" content="这是一份来自幻想乡的地图">
+	<meta property="twitter:url" content="https://map.thwiki.cc/">
+	<meta property="twitter:image" content="https://map.thwiki.cc/assets/thb.png">
 </head>
 
 <body ondragstart="return false">
@@ -775,7 +775,7 @@
 							mapColor: "#FF6A6A",
 							subMap: [
 								{
-									mapID: "hakureshrine",
+									mapID: "hakureishrine",
 									mapName: "博丽神社",
 									mapDesc:
 										`在幻想乡东侧边境的某座山头上，穿过鸟居，坐落着一间神社。这间神社规模不大，却深受幻想乡的人类们信赖，倒不是因为这里有多灵验——不如说，包括巫女在内，基本没人知道这里供奉着哪尊神明——而是因为，这里是处理妖怪问题的专家、人类的保护者·博丽的巫女的居所，博丽神社。
@@ -1075,6 +1075,9 @@
 					if (newVal) {
 						this.img.src = "./assets/map.thb.min.jpg";
 						this.playMusic();
+						setTimeout(() => {
+							this.moveMapByName("temple");
+						}, 500);
 					}
 				}
 			},
@@ -1105,8 +1108,12 @@
 				},
 				moveMap(map) {
 					var firstSubMap = map.subMap[0];
-					if (firstSubMap) {
-						$("html,body").animate({ scrollTop: this.$refs[firstSubMap.mapID][0].offsetTop }, 500);
+					this.moveMapByName(firstSubMap.mapID);
+				},
+				moveMapByName(mapName) {
+					console.log(mapName, this.$refs[mapName]);
+					if (this.$refs[mapName]) {
+						$("html,body").animate({ scrollTop: this.$refs[mapName][0].offsetTop }, 500);
 					}
 				},
 				playMusic() {
