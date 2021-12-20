@@ -1074,8 +1074,8 @@
 				loaded(newVal) {
 					if (newVal) {
 						this.img.src = "./assets/map.thb.min.jpg";
-						this.playMusic();
 						setTimeout(() => {
+							this.playMusic();
 							this.moveMapByName("temple");
 						}, 500);
 					}
@@ -1111,7 +1111,6 @@
 					this.moveMapByName(firstSubMap.mapID);
 				},
 				moveMapByName(mapName) {
-					console.log(mapName, this.$refs[mapName]);
 					if (this.$refs[mapName]) {
 						$("html,body").animate({ scrollTop: this.$refs[mapName][0].offsetTop }, 500);
 					}
