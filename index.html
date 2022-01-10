@@ -268,6 +268,23 @@
 							mapColor: "#008B45",
 							subMap: [
 								{
+									mapID: "yama",
+									mapName: "妖怪之山",
+									mapDesc:
+										`在幻想乡中，只要谈到“山”，就一定指的是妖怪之山。
+妖怪之山不只是一座山峰，而是像用双手捧起水一样环绕幻想乡的一整个山脉。妖怪之山的主峰非常高大，有四千米以上，妖怪之山即是垮塌之前的八岳。
+妖怪之山是一座仍然在活动中的火山，偶尔还能看见山顶冒出的浓烟。由于海拔跨度大，山上的植被种类繁多。秋天的时候，红叶尽染，宛如漫山火焰般壮观；初春的时候，积雪消融，白色的早樱和黄绿色的新芽四处点缀，充满了生命力和神秘性。想要欣赏此番绝景的人，可以借助索道前往守矢神社。
+	这座山被以天狗为首的妖怪统治着。天狗的领地意识非常强，也很排外，对于贸然进山的人类会毫不犹豫地驱逐。这里是幻想乡最古老的地点之一，盘踞着众多的妖怪与神明，除了天狗之外，这里还有山姥、山犬等等凶恶的妖怪，普通人毫无准备地进山就如同不穿衣服走进暴雪之中一样，是纯粹的自杀行为。
+或许是因为无法接近，人们流传着不少关于这座山的传闻，例如：妖怪之山的内部是中空的，天狗和河童在其中建造了一个全自动化的乌托邦城市；妖怪之山中存在着通向外界的出口，河童就是从其中偷取外界的技术的，等等。就像传闻说的一样，这座山还有不少未探明的神秘。`,
+									find: false,
+									top: "28%",
+									left: "7.3%",
+									width: "89.9%",
+									padding_top: "",
+									aspect_ratio: "1151/580",
+									border_radius: "",
+								},
+								{
 									mapID: "rainbowdragoncave",
 									mapName: "虹龙洞",
 									mapDesc:
@@ -283,20 +300,17 @@
 									border_radius: "",
 								},
 								{
-									mapID: "yama",
-									mapName: "妖怪之山",
+									mapID: "scripturehall",
+									mapName: "被遗弃的经堂",
 									mapDesc:
-										`在幻想乡中，只要谈到“山”，就一定指的是妖怪之山。
-妖怪之山不只是一座山峰，而是像用双手捧起水一样环绕幻想乡的一整个山脉。妖怪之山的主峰非常高大，有四千米以上，妖怪之山即是垮塌之前的八岳。
-妖怪之山是一座仍然在活动中的火山，偶尔还能看见山顶冒出的浓烟。由于海拔跨度大，山上的植被种类繁多。秋天的时候，红叶尽染，宛如漫山火焰般壮观；初春的时候，积雪消融，白色的早樱和黄绿色的新芽四处点缀，充满了生命力和神秘性。想要欣赏此番绝景的人，可以借助索道前往守矢神社。
-	这座山被以天狗为首的妖怪统治着。天狗的领地意识非常强，也很排外，对于贸然进山的人类会毫不犹豫地驱逐。这里是幻想乡最古老的地点之一，盘踞着众多的妖怪与神明，除了天狗之外，这里还有山姥、山犬等等凶恶的妖怪，普通人毫无准备地进山就如同不穿衣服走进暴雪之中一样，是纯粹的自杀行为。
-或许是因为无法接近，人们流传着不少关于这座山的传闻，例如：妖怪之山的内部是中空的，天狗和河童在其中建造了一个全自动化的乌托邦城市；妖怪之山中存在着通向外界的出口，河童就是从其中偷取外界的技术的，等等。就像传闻说的一样，这座山还有不少未探明的神秘。`,
+										`在密宗——如修验道——的信徒中，有一部分僧侣认为远离俗世的艰苦环境有益于修炼心性、禅悟真理。他们在山中修建了隐秘的经堂，在其中隐居修行。
+然而，在山中发现的这些经堂无一例外都是无人居住的荒废状态，而山下的村落里也没有听说过有哪位高僧修行归来。这些修行僧们并不是遭了山中的野兽和妖怪的毒手，而是被天狗带走了，被遗弃的经堂则会成为儿童天狗的游乐探险场所。`,
 									find: false,
-									top: "28%",
-									left: "7.3%",
-									width: "89.9%",
+									top: "27.6%",
+									left: "27.5%",
+									width: "5.9%",
 									padding_top: "",
-									aspect_ratio: "1151/580",
+									aspect_ratio: "80/50",
 									border_radius: "",
 								},
 								{
@@ -1050,7 +1064,7 @@
 				}
 
 				var pointer = 0;
-				$(document).on("keydown.passwordCheck", function (event) {
+				$(document).on("keydown.passwordCheck", (event) => {
 					var callAction = [71, 69, 78, 83, 79, 75, 89, 79];
 					if (event.keyCode == callAction[pointer] || event.which === callAction[pointer]) {
 						pointer++;
@@ -1127,10 +1141,8 @@
 					}
 				},
 				getUnfindMapCount() {
-					var unfind = this.mapList.filter(function (v) {
-						var tmp = v.subMap.filter(function (v1) {
-							return !v1.find;
-						});
+					var unfind = this.mapList.filter((v) => {
+						var tmp = v.subMap.filter((v1) => !v1.find);
 						return tmp.length > 0;
 					});
 					return unfind;
@@ -1210,10 +1222,10 @@
 					var nameReg = /\[([^\]]*)\]\]/g;
 					var nameReplaceReg = /\[\[([^\]]*)\]\]/g;
 					var pReg = /<p>(.*)<\/p>/g;
-					texts = texts.map(function (v) {
+					texts = texts.map((v) => {
 						if (nameReg.test(v)) {
 							var names = v.match(nameReg);
-							names.map(function (v1) {
+							names.map((v1) => {
 								v = v.replace(nameReplaceReg, "<a href='https://thwiki.cc/$1' target='_blank'><strong>$1</strong></a>");
 							});
 						}
